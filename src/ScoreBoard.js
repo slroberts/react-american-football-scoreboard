@@ -7,6 +7,7 @@ const ScoreBoard = ({homeScore, awayScore}) => {
   return (
     <div className="topRow">
       <LgDigitizer
+        team={"Lions"}
         score={homeScore}
         homeClass={"home"}
         nameClass={"home__name"}
@@ -16,6 +17,7 @@ const ScoreBoard = ({homeScore, awayScore}) => {
       <Timer />
 
       <LgDigitizer
+        team={"Tigers"}
         score={awayScore}
         homeClass={"away"}
         nameClass={"away__name"}

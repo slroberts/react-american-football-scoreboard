@@ -17,10 +17,6 @@ function App() {
     }
   };
 
-  //[ ] Write a "handler" function in App component that takes in a team name and an amount.
-  //This function will then be passed to each button's click handler.
-  //It will increment the correct team's score by the passed in amount
-
   return (
     <div className="container">
       <section className="scoreboard">
