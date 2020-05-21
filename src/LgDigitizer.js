@@ -1,14 +1,11 @@
 import React from "react";
 import "./App.css";
 
-const LgDigitizer = ({score, team, homeClass, nameClass, scoreClass}) => {
+const LgDigitizer = ({homeClass, nameClass, scoreClass, score, team}) => {
   return (
     <div className={homeClass}>
       <h2 className={nameClass}>{team}</h2>
-
-      <div className={scoreClass} name="LionsScore">
-        {score}
-      </div>
+      <div className={scoreClass}>{score}</div>
     </div>
   );
 };
