@@ -1,26 +1,39 @@
 import React from "react";
+import SmDigitizer from "./SmDigitizer";
 import "./App.css";
 
-const BottomRow = () => {
+const BottomRow = ({quaterValue}) => {
   return (
     <div>
       <div className="bottomRow">
-        <div className="down">
-          <h3 className="down__title">Down</h3>
-          <div className="down__value">3</div>
-        </div>
-        <div className="toGo">
-          <h3 className="toGo__title">To Go</h3>
-          <div className="toGo__value">7</div>
-        </div>
-        <div className="ballOn">
-          <h3 className="ballOn__title">Ball on</h3>
-          <div className="ballOn__value">21</div>
-        </div>
-        <div className="quarter">
-          <h3 className="quarter__title">Quarter</h3>
-          <div className="quarter__value">4</div>
-        </div>
+        <SmDigitizer
+          titleClass={"down"}
+          headingClass={"down__title"}
+          divClass={"down__value"}
+          headingValue={"Down"}
+          divValue={3}
+        />
+        <SmDigitizer
+          titleClass={"toGo"}
+          headingClass={"toGo__title"}
+          divClass={"toGo__value"}
+          headingValue={"To Go"}
+          divValue={7}
+        />
+        <SmDigitizer
+          titleClass={"ballOn"}
+          headingClass={"ballOn__title"}
+          divClass={"ballOn__value"}
+          headingValue={"Ball on"}
+          divValue={21}
+        />
+        <SmDigitizer
+          titleClass={"quarter"}
+          headingClass={"quarter__title"}
+          divClass={"quarter__value"}
+          headingValue={"Quarter"}
+          divValue={quaterValue}
+        />
       </div>
     </div>
   );
