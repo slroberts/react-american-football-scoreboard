@@ -9,8 +9,12 @@ function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
   const [score, setScore] = useState({lions: 0, tigers: 0});
 
-  const handleScoreUpdate = (points) => {
-    setScore({...score, lions: points});
+  const handleScoreUpdate = (team, points) => {
+    if (team === "lions") {
+      setScore({...score, lions: points});
+    } else {
+      setScore({...score, tigers: points});
+    }
   };
 
   //[ ] Write a "handler" function in App component that takes in a team name and an amount.
@@ -29,24 +33,24 @@ function App() {
           <Button
             buttonClass={"homeButtons__touchdown"}
             buttonValue={"Home Touchdown"}
-            onClick={() => handleScoreUpdate(score.lions + 7)}
+            handleClick={() => handleScoreUpdate("lions", score.lions + 7)}
           />
           <Button
             buttonClass={"homeButtons__fieldGoal"}
             buttonValue={"Home Field Goal"}
-            onClick={() => handleScoreUpdate(score.lions + 3)}
+            handleClick={() => handleScoreUpdate("lions", score.lions + 3)}
           />
         </div>
         <div className="awayButtons">
           <Button
             buttonClass={"awayButtons__touchdown"}
             buttonValue={"Away Touchdown"}
-            onClick={() => handleScoreUpdate(score.lions + 7)}
+            handleClick={() => handleScoreUpdate("tigers", score.tigers + 7)}
           />
           <Button
             buttonClass={"awayButtons__fieldGoal"}
             buttonValue={"Away Field Goal"}
-            onClick={() => handleScoreUpdate(score.lions + 3)}
+            handleClick={() => handleScoreUpdate("tigers", score.tigers + 3)}
           />
         </div>
       </section>
